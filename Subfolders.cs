@@ -21,7 +21,7 @@ namespace ConsoleApp
             Console.WriteLine("2)Type how many subfolders you want to create: ");
             var user2 = Convert.ToInt32(Console.ReadLine());
             int counter1 = 1;
-            //var dir = Directory.GetCurrentDirectory(Path.GetFullPath,subDirectory ,SearchOption.AllDirectories);
+         
             while (counter1 != user2)
             {
                 //don't create more than 300 directories beacuse of "memory"
@@ -29,7 +29,7 @@ namespace ConsoleApp
                 {
                     for (int qi = 1; qi <= user2; qi++)
                         Directory.CreateDirectory(destinationFolder + qi);
-                    //string combine = destinationFolder + qi;
+               
                     Console.WriteLine("Successfully created : " + user2 + " SubDirectories!");
                     var directory = Path.GetFullPath(subDirectory.Replace(subDirectory, destinationFolder));
                     Console.WriteLine("Your path of subdirectories is: " + directory);
